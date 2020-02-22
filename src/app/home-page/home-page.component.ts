@@ -9,6 +9,37 @@ export class HomePageComponent implements OnInit {
 
   constructor() { }
 
+  public profileStaticData = [
+    {
+      title: "Email :",
+      content: "particalweng@gmail.com"
+    },
+    {
+      title: "Phone :",
+      content: "+886 919-417-087"
+    },
+    {
+      title: "Website :",
+      content: "PersonalCard.Design/partical.weng"
+    },
+  ];
+  public educationStaticData = [
+    {
+      title: "42 Silicon Valley",
+      description: "July 2018 -  Aug 2018",
+      contentList: [
+        "Fremont, California",
+        "(已通過為期一個月之 Piscine 測試)"
+      ]
+    },
+    {
+      title: "中山大學生物科學系",
+      description: "Sep 2016 - Jun 2018",
+      contentList: [
+        "高雄, 臺灣"
+      ]
+    },
+  ];
   public employmentStaticData = [
     {
       title: "Careline 英國凱萊",
