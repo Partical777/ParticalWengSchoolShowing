@@ -7,4 +7,30 @@
             </div>
           </div>
     </section>
+    <section class="section section-employment">
+        <mat-accordion>
+            <h3>EMPLOYMENT</h3>
+            <ng-container *ngFor="let employment of employmentStaticData;">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            {{employment.title}}
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            {{employment.description}}
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div>
+                        <div>{{employment.content.company}}</div>
+                        <div>{{employment.content.title}}</div>
+                        <div>{{employment.content.period}}</div>
+                        <div>{{employment.content.descriptionText}}</div>
+                        <ul *ngFor="let description of employment.content.descriptionList">
+                            <li>{{description}}</li>
+                        </ul>
+                    </div>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
+    </section>
 </div>
