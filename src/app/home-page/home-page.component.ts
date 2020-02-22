@@ -91,6 +91,42 @@ export class HomePageComponent implements OnInit {
         ]
       }
     },
+  ];
+  public skillStaticData = [
+    {
+      title: "Front-End 網頁前端",
+      contentList: [
+        "3 年以上前端經歷",
+        "HTML, CSS, SCSS, Javascript, Typescript"
+      ]
+    },
+    {
+      title: "Angular 9",
+      contentList: [
+        "建立完整功能與架構現代網站",
+        "透過多種線上自學資源習得"
+      ]
+    },
+    {
+      title: "Firebase",
+      contentList: [
+        "擁有資料庫設置、網站 Host、使用者登入系統等建立技術",
+        "使用 Firebase 搭配前端框架，即可建立具有完整後端功能之網站"
+      ]
+    },
+    {
+      title: "UX/UI 設計",
+      contentList: [
+        "2年以上 Adobe Illustrator, Photoshop 使用經驗",
+        "平面及 Logo 設計製圖能力"
+      ]
+    },
+    {
+      title: "Maker 技術",
+      contentList: [
+        "曾經待過多個 Maker 空間&社群：Futureward, Mzone, 創客萊吧, 創客閣樓習得雷射切割雕刻，3D 列印，木工技術，以及許多開源電路板之應用。",
+      ]
+    },
   ]
 
   ngOnInit(): void {

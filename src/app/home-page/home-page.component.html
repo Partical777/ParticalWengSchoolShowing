@@ -83,4 +83,21 @@
             </ng-container>
         </mat-accordion>
     </section>
+    <section class="section section-skill">
+        <mat-accordion>
+            <h3>SKILL</h3>
+            <ng-container *ngFor="let skill of skillStaticData;">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            {{skill.title}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ng-container *ngFor="let content of skill.contentList">
+                        <div>{{content}}</div>
+                    </ng-container>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
+    </section>
 </div>
