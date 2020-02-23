@@ -13,7 +13,7 @@
                 <img class="section-info-image-link" src="https://lh5.googleusercontent.com/rFaX5JOfJK98l7KSugtFK0h_jfeGQk72XFU7kqrBBfnQEWs40MySGGb1Oq8iSVbvZtWFH6LBpYUTqwAE-VCYFHOdWCAxQXsAGsoo7H8SAd-N2urWXmF6piwJebDiypYD0c-DaJVu"/>
             </div>
             <div class="section-info-introduction section-info-grid-introduction">
-                <h3>INTRODUCTION</h3>
+                <h3 class="section-title">INTRODUCTION</h3>
                 <ng-container *ngFor="let introduction of introductionStaticData">
                     <ng-container *ngIf="introduction !== '-space-'; else showSpace">
                         <div>{{introduction}}</div>
@@ -28,7 +28,7 @@
     <section class="section section-skill">
         <div class="section-skill-grid">
             <div class="section-skill-profile section-skill-grid-profile">
-                <h3>PROFILE</h3>
+                <h3 class="section-title">PROFILE</h3>
                 <ng-container *ngFor="let profile of profileStaticData">
                     <div class="section-skill-profile-block">
                         <div>{{profile.title}}</div>
@@ -37,7 +37,7 @@
                 </ng-container>
             </div>
             <mat-accordion class="section-skill-grid-expansion">
-                <h3>SKILL</h3>
+                <h3 class="section-title">SKILL</h3>
                 <ng-container *ngFor="let skill of skillStaticData;">
                     <mat-expansion-panel>
                         <mat-expansion-panel-header>
@@ -55,8 +55,8 @@
     </section>
     <section class="section section-background section-background-grid">
         <section class="section-background-education section-background-grid-education">
+            <h3 class="section-title">EDUCATION</h3>
             <mat-accordion>
-                <h3>EDUCATION</h3>
                 <ng-container *ngFor="let education of educationStaticData;">
                     <h2>{{education.title}}</h2>
                     <span>{{education.description}}</span>
@@ -68,8 +68,8 @@
             </mat-accordion>
         </section>
         <section class="section-background-employment section-background-grid-employment">
+            <h3 class="section-title">EMPLOYMENT</h3>
             <mat-accordion>
-                <h3>EMPLOYMENT</h3>
                 <ng-container *ngFor="let employment of employmentStaticData;">
                     <mat-expansion-panel>
                         <mat-expansion-panel-header>
@@ -95,7 +95,7 @@
         </section>
     </section>
     <section class="section section-projects">
-        <h3>PROJECTS</h3>
+        <h3 class="section-title">PROJECTS</h3>
         <div class="section-projects-block">
             <ng-container *ngFor="let project of projectsStaticData">
                 <mat-card class="section-projects-card">
@@ -118,8 +118,8 @@
         </div>
     </section>
     <section class="section section-moreprojects">
+        <h3 class="section-title">More Projects</h3>
         <mat-accordion>
-            <h3>More Projects</h3>
             <ng-container *ngFor="let project of moreProjectsStaticData;">
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>

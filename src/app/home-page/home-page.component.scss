@@ -9,6 +9,13 @@
     justify-items: center;
     align-items: center;
 
+    &-title {
+        color: #c2185b;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
     &-brand {
         height: 100vh;
         width: 100vw;
