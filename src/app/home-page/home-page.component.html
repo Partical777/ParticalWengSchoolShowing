@@ -92,6 +92,29 @@
             </ng-container>
         </mat-accordion>
     </section>
+    <section class="section section-projects">
+        <h3>PROJECTS</h3>
+        <div class="section-projects-block">
+            <ng-container *ngFor="let project of projectsStaticData">
+                <mat-card class="section-projects-card">
+                    <mat-card-header>
+                        <mat-card-title>{{project.title}}</mat-card-title>
+                        <mat-card-subtitle>
+                            <a class="section-projects-card-subtitle-link" href="{{project.subTitle}}">
+                                {{project.subTitle}}
+                            </a>
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <div class="section-projects-card-image">
+                        <img mat-card-image class="section-projects-card-image-link" src="{{project.image}}" alt="Photo of a Shiba Inu">
+                    </div>
+                    <mat-card-content>
+                        <p>{{project.content}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </ng-container>
+        </div>
+    </section>
     <section class="section section-moreprojects">
         <mat-accordion>
             <h3>More Projects</h3>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-home-page',
@@ -142,6 +143,26 @@ export class HomePageComponent implements OnInit {
       contentList: [
         "曾經待過多個 Maker 空間&社群：Futureward, Mzone, 創客萊吧, 創客閣樓習得雷射切割雕刻，3D 列印，木工技術，以及許多開源電路板之應用。",
       ]
+    },
+  ]
+  public projectsStaticData = [
+    {
+      title: "PersonalCard.Design",
+      subTitle: "https://personalcare.design",
+      image: "https://lh5.googleusercontent.com/ArU-lMqMs6ppaXUg2s8sBVfAUcIyDNT9-4t5UxChmZMIkhidYI40iFDmxwzcYlHXD_P3BOyY3HXq_t_WYRi0Gj4XRA4vD29u1JBQNW14dWvr5zei-5pzAzJIC5FkUrbd-XIxU5-J",
+      content: "Personal Card is your Business Card, 為 2019/12 中旬開始之專案, 從設計、製作，到行銷、尋找使用者皆一手包辦, 目前 Beta 版本擁有 56 位初期使用者, 新功能仍在增加中"
+    },
+    {
+      title: "Bal Laedi Blogger",
+      subTitle: "https://ballaediworkshop.blogspot.com",
+      image: "https://lh5.googleusercontent.com/rteMRMC_sCY9z43hDiM3bdCNewbX5Q-0gHAHNjOUA8yNbjvwRtfMoeHNxM9zFmuRFRrGZUN4D6iIBO0FZeMvg6a38-4a6KhmD_wp49Tj85GZz2Flo9TR15crNbFCfAwmJczUbPTw",
+      content: "科技、技術、與觀點之部落格, 召集了多位團隊夥伴一同加入, 撰寫各自不同專業面向之主題文章, 也負責設計部落格主題及文章版型"
+    },
+    {
+      title: "Partical Design Collections",
+      subTitle: "https://www.instagram.com/partical_design/",
+      image: "https://lh5.googleusercontent.com/rFaX5JOfJK98l7KSugtFK0h_jfeGQk72XFU7kqrBBfnQEWs40MySGGb1Oq8iSVbvZtWFH6LBpYUTqwAE-VCYFHOdWCAxQXsAGsoo7H8SAd-N2urWXmF6piwJebDiypYD0c-DaJVu",
+      content: "各式創作, Logo, 動畫, Neon...etc, by Adobo Illustrate, Photoshop, After Effect"
     },
   ]
   public moreProjectsStaticData = [
