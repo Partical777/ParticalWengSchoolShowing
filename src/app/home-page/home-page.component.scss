@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 .container {
     overflow: hidden;
-    font-size: 1.1rem;
   }
   
 .section {
@@ -120,11 +119,11 @@
         margin: 3.5rem auto;
 
         &-education {
-
+            width: 90%;
         }
     
         &-employment {
-    
+            width: 90%;
         }
 
         &-grid {
@@ -150,10 +149,12 @@
         &-block {
             display: flex;
             flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         &-card {
             max-width: 400px;
-            margin: 2rem;
+            margin: 1rem 2rem;
             
             &-subtitle {
                 &-link {
@@ -236,6 +237,7 @@
             }
         }
         &-info {
+            width: 90%;
             margin-bottom: 250px;
             &-image {
                 display: grid;
@@ -248,6 +250,9 @@
                     width: auto;
                 }
             }
+            &-introduction {
+                margin-top: 25px;
+            }
             &-grid {
                 grid-template-columns: 100%;
                 grid-template-areas: 
@@ -257,6 +262,7 @@
         }
 
         &-skill{
+            width: 95%;
             &-grid {
                 grid-template-columns: 100%;
                 grid-template-areas: 
@@ -266,6 +272,7 @@
         }
 
         &-background {
+            width: 95%;
             &-grid {
                 display: grid;
                 grid-template-columns: 100%;
