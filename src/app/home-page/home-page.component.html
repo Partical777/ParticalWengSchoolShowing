@@ -19,22 +19,14 @@
         </div>
         <div class="section-info-introduction">
             <h3>INTRODUCTION</h3>
-            <p>
-                曾於金融科技業新創擔任 Angular 前端工程師，學會軟體協作流程及如何使用專案管理使團隊運作良好；也是在此確認自己的熱情是在於整合資源，製作產品或是幫助更適合的夥伴，而不僅僅是技術層面。
-
-                生物本科跨足前端之工程師，由豐富的線上課程、資源學習成材，甚至於2018年時，飛去美國矽谷參與一所非正規程式學校 - 42 長達一個月的 piscine 測驗並且通過測試。
-
-                熱衷學習不同領域知識與執行 Side Project 者，設計、行銷、商業模式、專案管理等等，藉由書籍與豐富的線上資源深入瞭解。
-                曾經主導小團隊製作了”戶外實境遊戲”。
-                也經營著不定時更新之技術部落格。
-                目前正進行著 PersonalCard.Design 的製作，Beta 版本已有 56 位出初期使用者。
-
-                平時也參與許多活動，像是新創盛會 Meet Taipei 以及許多大大小小的創新創業分享、展覽，曾經加入多個社群：Futureward, Mzone, 創客萊吧, 創客閣樓, Innoventure Club...。
-
-                愛好發掘國內外創新的產品、服務及商業模式，期待著創新將創造更美好的世界。固定關注 Product Hunt，以及其他社群與新聞平台。
-
-                相信廣泛學習與精深技能一樣重要，並且相信發展更多樣化的技能組合將是未來趨勢。
-            </p>
+            <ng-container *ngFor="let introduction of introductionStaticData">
+                <ng-container *ngIf="introduction !== '-space-'; else showSpace">
+                    <div>{{introduction}}</div>
+                </ng-container>
+                <ng-template #showSpace>
+                    <br/>
+                </ng-template>
+            </ng-container>
         </div>
     </section>
     <section class="section section-education">
@@ -94,6 +86,23 @@
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <ng-container *ngFor="let content of skill.contentList">
+                        <div>{{content}}</div>
+                    </ng-container>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
+    </section>
+    <section class="section section-moreprojects">
+        <mat-accordion>
+            <h3>More Projects</h3>
+            <ng-container *ngFor="let project of moreProjectsStaticData;">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            {{project.title}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ng-container *ngFor="let content of project.contentList">
                         <div>{{content}}</div>
                     </ng-container>
                 </mat-expansion-panel>
