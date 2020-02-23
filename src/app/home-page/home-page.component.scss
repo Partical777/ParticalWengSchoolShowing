@@ -71,6 +71,28 @@
                 width: 100%;
             }
         }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 35% 65%;
+            grid-template-areas: 
+            "image introduction"
+            "image introduction";
+
+            &-image {
+                grid-area: image; 
+            }
+            &-introduction {
+                grid-area: introduction;
+            }
+        }
+    }
+
+    &-skill{
+        width: 75%;
+        margin: 3.5rem auto;
+
         &-profile {
             &-block {
                 margin: 1rem;
@@ -79,20 +101,17 @@
 
         &-grid {
             display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 35% 65%;
+            grid-template-columns: 60% 40%;
             grid-template-areas: 
-            "image profile"
-            "image introduction";
+            "expansion profile";
 
-            &-image {
-                grid-area: image; 
-            }
             &-profile {
                 grid-area: profile;
+                padding: 1rem;
             }
-            &-introduction {
-                grid-area: introduction;
+            &-expansion {
+                grid-area: expansion;
+                padding: 1rem;
             }
         }
     }
@@ -102,10 +121,6 @@
     }
 
     &-employment {
-
-    }
-
-    &-skill{
 
     }
 

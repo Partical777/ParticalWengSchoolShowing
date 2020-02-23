@@ -12,15 +12,6 @@
             <div class="section-info-image section-info-grid-image">
                 <img class="section-info-image-link" src="https://lh5.googleusercontent.com/rFaX5JOfJK98l7KSugtFK0h_jfeGQk72XFU7kqrBBfnQEWs40MySGGb1Oq8iSVbvZtWFH6LBpYUTqwAE-VCYFHOdWCAxQXsAGsoo7H8SAd-N2urWXmF6piwJebDiypYD0c-DaJVu"/>
             </div>
-            <div class="section-info-profile section-info-grid-profile">
-                <h3>PROFILE</h3>
-                <ng-container *ngFor="let profile of profileStaticData">
-                    <div class="section-info-profile-block">
-                        <div>{{profile.title}}</div>
-                        <div>{{profile.content}}</div>
-                    </div>
-                </ng-container>
-            </div>
             <div class="section-info-introduction section-info-grid-introduction">
                 <h3>INTRODUCTION</h3>
                 <ng-container *ngFor="let introduction of introductionStaticData">
@@ -32,6 +23,34 @@
                     </ng-template>
                 </ng-container>
             </div>
+        </div>
+    </section>
+    <section class="section section-skill">
+        <div class="section-skill-grid">
+            <div class="section-skill-profile section-skill-grid-profile">
+                <h3>PROFILE</h3>
+                <ng-container *ngFor="let profile of profileStaticData">
+                    <div class="section-skill-profile-block">
+                        <div>{{profile.title}}</div>
+                        <div>{{profile.content}}</div>
+                    </div>
+                </ng-container>
+            </div>
+            <mat-accordion class="section-skill-grid-expansion">
+                <h3>SKILL</h3>
+                <ng-container *ngFor="let skill of skillStaticData;">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{skill.title}}
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ng-container *ngFor="let content of skill.contentList">
+                            <div>{{content}}</div>
+                        </ng-container>
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
         </div>
     </section>
     <section class="section section-education">
@@ -76,23 +95,6 @@
                             <li>{{description}}</li>
                         </ul>
                     </div>
-                </mat-expansion-panel>
-            </ng-container>
-        </mat-accordion>
-    </section>
-    <section class="section section-skill">
-        <mat-accordion>
-            <h3>SKILL</h3>
-            <ng-container *ngFor="let skill of skillStaticData;">
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            {{skill.title}}
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <ng-container *ngFor="let content of skill.contentList">
-                        <div>{{content}}</div>
-                    </ng-container>
                 </mat-expansion-panel>
             </ng-container>
         </mat-accordion>
