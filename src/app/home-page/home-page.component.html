@@ -8,25 +8,30 @@
           </div>
     </section>
     <section class="section section-info">
-        <div class="section-info-profile">
-            <h3>PROFILE</h3>
-            <ng-container *ngFor="let profile of profileStaticData">
-                <div class="section-info-profile-block">
-                    <div>{{profile.title}}</div>
-                    <div>{{profile.content}}</div>
-                </div>
-            </ng-container>
-        </div>
-        <div class="section-info-introduction">
-            <h3>INTRODUCTION</h3>
-            <ng-container *ngFor="let introduction of introductionStaticData">
-                <ng-container *ngIf="introduction !== '-space-'; else showSpace">
-                    <div>{{introduction}}</div>
+        <div class="section-info-grid">
+            <div class="section-info-image section-info-grid-image">
+                <img class="section-info-image-link" src="https://lh5.googleusercontent.com/rFaX5JOfJK98l7KSugtFK0h_jfeGQk72XFU7kqrBBfnQEWs40MySGGb1Oq8iSVbvZtWFH6LBpYUTqwAE-VCYFHOdWCAxQXsAGsoo7H8SAd-N2urWXmF6piwJebDiypYD0c-DaJVu"/>
+            </div>
+            <div class="section-info-profile section-info-grid-profile">
+                <h3>PROFILE</h3>
+                <ng-container *ngFor="let profile of profileStaticData">
+                    <div class="section-info-profile-block">
+                        <div>{{profile.title}}</div>
+                        <div>{{profile.content}}</div>
+                    </div>
                 </ng-container>
-                <ng-template #showSpace>
-                    <br/>
-                </ng-template>
-            </ng-container>
+            </div>
+            <div class="section-info-introduction section-info-grid-introduction">
+                <h3>INTRODUCTION</h3>
+                <ng-container *ngFor="let introduction of introductionStaticData">
+                    <ng-container *ngIf="introduction !== '-space-'; else showSpace">
+                        <div>{{introduction}}</div>
+                    </ng-container>
+                    <ng-template #showSpace>
+                        <br/>
+                    </ng-template>
+                </ng-container>
+            </div>
         </div>
     </section>
     <section class="section section-education">

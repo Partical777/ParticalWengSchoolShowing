@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 .container {
     overflow: hidden;
+    font-size: 1.1rem;
   }
   
 .section {
@@ -62,9 +63,36 @@
         width: 75%;
         margin: 0 auto;
 
+        &-image {
+            width: 90%;
+            margin: 0 auto;
+
+            &-link {
+                width: 100%;
+            }
+        }
         &-profile {
             &-block {
                 margin: 1rem;
+            }
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 35% 65%;
+            grid-template-areas: 
+            "image profile"
+            "image introduction";
+
+            &-image {
+                grid-area: image; 
+            }
+            &-profile {
+                grid-area: profile;
+            }
+            &-introduction {
+                grid-area: introduction;
             }
         }
     }
