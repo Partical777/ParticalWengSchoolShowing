@@ -116,14 +116,37 @@
         }
     }
 
-    &-education {
+    &-background {
+        width: 75%;
+        margin: 3.5rem auto;
 
+        &-education {
+
+        }
+    
+        &-employment {
+    
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: 35% 65%;
+            grid-template-areas: 
+            "education employment";
+            align-items: start;
+
+            &-education {
+                grid-area: education;
+                padding: 1rem;
+            }
+        
+            &-employment {
+                grid-area: employment;
+                padding: 1rem;
+            }
+        }
     }
-
-    &-employment {
-
-    }
-
+    
     &-projects {
         &-block {
             display: flex;

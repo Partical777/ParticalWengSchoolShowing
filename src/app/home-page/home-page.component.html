@@ -53,51 +53,46 @@
             </mat-accordion>
         </div>
     </section>
-    <section class="section section-education">
-        <mat-accordion>
-            <h3>EDUCATION</h3>
-            <ng-container *ngFor="let education of educationStaticData;">
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            {{education.title}}
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            {{education.description}}
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+    <section class="section section-background section-background-grid">
+        <section class="section-background-education section-background-grid-education">
+            <mat-accordion>
+                <h3>EDUCATION</h3>
+                <ng-container *ngFor="let education of educationStaticData;">
+                    <h2>{{education.title}}</h2>
+                    <span>{{education.description}}</span>
                     <ng-container *ngFor="let content of education.contentList">
                         <div>{{content}}</div>
                     </ng-container>
-                </mat-expansion-panel>
-            </ng-container>
-        </mat-accordion>
-    </section>
-    <section class="section section-employment">
-        <mat-accordion>
-            <h3>EMPLOYMENT</h3>
-            <ng-container *ngFor="let employment of employmentStaticData;">
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            {{employment.title}}
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            {{employment.description}}
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div>
-                        <div>{{employment.content.company}}</div>
-                        <div>{{employment.content.title}}</div>
-                        <div>{{employment.content.period}}</div>
-                        <div>{{employment.content.descriptionText}}</div>
-                        <ul *ngFor="let description of employment.content.descriptionList">
-                            <li>{{description}}</li>
-                        </ul>
-                    </div>
-                </mat-expansion-panel>
-            </ng-container>
-        </mat-accordion>
+                    <br/>
+                </ng-container>
+            </mat-accordion>
+        </section>
+        <section class="section-background-employment section-background-grid-employment">
+            <mat-accordion>
+                <h3>EMPLOYMENT</h3>
+                <ng-container *ngFor="let employment of employmentStaticData;">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{employment.title}}
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                {{employment.description}}
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div>
+                            <div>{{employment.content.company}}</div>
+                            <div>{{employment.content.title}}</div>
+                            <div>{{employment.content.period}}</div>
+                            <div>{{employment.content.descriptionText}}</div>
+                            <ul *ngFor="let description of employment.content.descriptionList">
+                                <li>{{description}}</li>
+                            </ul>
+                        </div>
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+        </section>
     </section>
     <section class="section section-projects">
         <h3>PROJECTS</h3>
