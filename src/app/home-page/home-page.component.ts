@@ -161,7 +161,7 @@ export class HomePageComponent implements OnInit {
     {
       title: "Partical Design Collections",
       subTitle: "https://www.instagram.com/partical_design/",
-      image: "https://lh5.googleusercontent.com/rFaX5JOfJK98l7KSugtFK0h_jfeGQk72XFU7kqrBBfnQEWs40MySGGb1Oq8iSVbvZtWFH6LBpYUTqwAE-VCYFHOdWCAxQXsAGsoo7H8SAd-N2urWXmF6piwJebDiypYD0c-DaJVu",
+      image: "https://lh5.googleusercontent.com/HJve9hyi2BOky-FQES_YW5j7RuIwdWzBkHWbbgzrku7-3I_Ij6drP9WwIQU-z0Vn1q6vasuO700y-QQOZDK-V6kvxZnix88oxdt03abytfu1KCwQFDB7-36X1WSDxBtZZErDNSvg",
       content: "各式創作, Logo, 動畫, Neon...etc, by Adobo Illustrate, Photoshop, After Effect"
     },
   ]
